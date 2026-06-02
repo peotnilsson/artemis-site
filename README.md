@@ -30,6 +30,9 @@ The demo cards are placeholders only. They are not product screenshots, copied c
 Sprint 19D redesigns the page as a dark premium landing page while keeping it static and original. The page now emphasizes:
 
 - Dark high-contrast hero treatment.
+- Full-page navy/charcoal background with no white or cream section/card backgrounds.
+- Muted cyan primary accents and muted pink secondary accents.
+- Dark glass panels for terminal, dashboard, app-shell, voice, feature, roadmap, and get-started cards.
 - Local-first AI command center identity.
 - Voice, terminal, dashboard, memory/project continuity, app-shell direction, and safe action roadmap.
 - Static terminal/dashboard/app-shell/voice preview cards.
