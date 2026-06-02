@@ -1,6 +1,6 @@
 # Artemis Website Scaffold
 
-This folder contains the inert static website scaffold for Sprint 19A, Sprint 19B, and Sprint 19C.
+This folder contains the inert static website scaffold for Sprint 19A, Sprint 19B, Sprint 19C, and Sprint 19D.
 
 Boundaries:
 
@@ -15,7 +15,7 @@ Open `index.html` directly in a browser to view the local scaffold.
 
 ## Sprint 19B Visual Contract
 
-The current scaffold includes:
+The scaffold includes:
 
 - A stronger hero and CTA area.
 - Feature sections for voice, terminal, dashboard, memory/project continuity, app-shell direction, and the safe action roadmap.
@@ -24,6 +24,19 @@ The current scaffold includes:
 - Responsive CSS media queries for tablet and mobile layouts.
 
 The demo cards are placeholders only. They are not product screenshots, copied competitor screenshots, remote images, or generated assets.
+
+## Sprint 19D Dark Premium Redesign
+
+Sprint 19D redesigns the page as a dark premium landing page while keeping it static and original. The page now emphasizes:
+
+- Dark high-contrast hero treatment.
+- Local-first AI command center identity.
+- Voice, terminal, dashboard, memory/project continuity, app-shell direction, and safe action roadmap.
+- Static terminal/dashboard/app-shell/voice preview cards.
+- Original Artemis field notes instead of fake corporate testimonials.
+- A short story section explaining why Artemis exists.
+
+Odysseus is treated as high-level inspiration for polish and structure only. Do not copy its code, text, assets, branding, exact layout, or product identity.
 
 ## GitHub Pages Deployment
 
@@ -49,6 +62,17 @@ GitHub repository settings still need to enable Pages with GitHub Actions as the
 Edit the static files in `website/`, then push to `dev` or `main`. The workflow only runs when `website/**` or `.github/workflows/pages.yml` changes, or when manually started from GitHub Actions.
 
 Keep updates within the same safety boundary: no scripts, no analytics, no tracking pixels, no remote assets, no external fonts, no package manager, no build system, and no app/action controls.
+
+## Public Site Copy
+
+After validation in this private Artemis repo, copy these files to the public `peotnilsson/artemis-site` repo:
+
+- `website/index.html`
+- `website/styles.css`
+- `website/.nojekyll`
+- `website/README.md`
+
+The public site repo is the public-facing website surface. The Artemis core repo remains private while the project is under development.
 
 ## Disabling Deployment
 
