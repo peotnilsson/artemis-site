@@ -11,10 +11,20 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <svg class="logo-sprite" aria-hidden="true" height="0" width="0">
+      <symbol id="artemis-logo-mark" viewBox="0 0 64 64">
+        <rect class="mark-bg" x="4" y="4" width="56" height="56" rx="16"></rect>
+        <path class="mark-crescent" fill-rule="evenodd" d="M30 10a22 22 0 1 0 0 44 22 22 0 1 0 0-44ZM39 14a18 18 0 1 1 0 36 18 18 0 1 1 0-36Z"></path>
+        <path class="mark-cursor" d="M39 39l7 5-7 5"></path>
+        <circle class="mark-accent" cx="50" cy="47" r="2.8"></circle>
+      </symbol>
+    </svg>
     <header class="site-header">
       <a class="brand" href="#hero" aria-label="Artemis home">
-        <span class="brand-mark" aria-hidden="true">A</span>
-        Artemis
+        <svg class="brand-mark artemis-logo-svg" data-artemis-logo="inline-svg" role="img" aria-label="Artemis crescent terminal mark">
+          <use href="#artemis-logo-mark"></use>
+        </svg>
+        <span class="brand-wordmark" data-artemis-wordmark="ARTEMIS">ARTEMIS</span>
       </a>
       <nav aria-label="Primary navigation">
         <a href="#features">Features</a>
@@ -30,7 +40,9 @@
     <main>
       <section id="hero" class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <div class="hero-mark" aria-hidden="true">A</div>
+          <svg class="hero-mark artemis-logo-svg" data-artemis-logo="inline-svg" aria-hidden="true">
+            <use href="#artemis-logo-mark"></use>
+          </svg>
           <p class="eyebrow">Local-first AI command center</p>
           <h1 id="hero-title">Your <span class="accent-word">local</span> AI command center.</h1>
           <p class="hero-line">
@@ -194,7 +206,7 @@
       <section id="story" class="section story-section" aria-labelledby="story-title">
         <div class="story-card">
           <p class="eyebrow">Why Artemis exists</p>
-          <h2 id="story-title">Cloud assistants are useful. Your desktop still deserves its own copilot.</h2>
+          <h2 id="story-title">Cloud assistants are useful. Your desktop still deserves its own local command layer.</h2>
           <p>
             Most AI tools feel disconnected from the real machine where your work happens. Artemis is
             being built as a local AI command center instead: voice, memory, dashboard, terminal, and

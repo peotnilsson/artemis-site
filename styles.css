@@ -12,10 +12,14 @@
   --line: rgba(146, 167, 187, 0.16);
   --line-strong: rgba(119, 214, 205, 0.38);
   --cyan: #77d6cd;
-  --pink: #e98296;
+  --crimson: #d33a42;
+  --crimson-deep: #8f1f2d;
+  --pink: var(--crimson);
   --violet: #9a91ff;
   --gold: #e7be6d;
   --shadow: rgba(0, 0, 0, 0.58);
+  --font-ui: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-display: "Space Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
 
 * {
@@ -30,11 +34,11 @@ body {
   margin: 0;
   background:
     radial-gradient(circle at 50% -10%, rgba(119, 214, 205, 0.2), transparent 30rem),
-    radial-gradient(circle at 20% 18%, rgba(233, 130, 150, 0.12), transparent 24rem),
+    radial-gradient(circle at 20% 18%, rgba(211, 58, 66, 0.12), transparent 24rem),
     radial-gradient(circle at 80% 24%, rgba(154, 145, 255, 0.12), transparent 26rem),
     linear-gradient(180deg, var(--bg), var(--bg-2) 42%, var(--bg-3) 72%, var(--bg));
   color: var(--ink);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-ui);
   line-height: 1.55;
   min-height: 100vh;
   overflow-x: hidden;
@@ -58,8 +62,15 @@ a {
 }
 
 code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-ui);
   overflow-wrap: anywhere;
+}
+
+.logo-sprite {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
 }
 
 .site-header {
@@ -80,6 +91,7 @@ code {
   align-items: center;
   color: var(--ink);
   display: inline-flex;
+  font-family: var(--font-display);
   font-weight: 850;
   gap: 10px;
   text-decoration: none;
@@ -87,28 +99,44 @@ code {
 
 .brand-mark,
 .hero-mark {
-  align-items: center;
-  background:
-    linear-gradient(135deg, rgba(119, 214, 205, 0.2), rgba(233, 130, 150, 0.16)),
-    var(--panel-strong);
-  border: 1px solid var(--line-strong);
-  color: var(--cyan);
-  display: inline-flex;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  font-weight: 900;
-  justify-content: center;
+  display: inline-block;
+  filter: drop-shadow(0 0 14px rgba(119, 214, 205, 0.18));
+  flex: 0 0 auto;
+  overflow: visible;
+}
+
+.brand-wordmark {
+  letter-spacing: 0;
+}
+
+.mark-bg {
+  fill: #070b10;
+  stroke: rgba(119, 214, 205, 0.42);
+  stroke-width: 2;
+}
+
+.mark-crescent {
+  fill: var(--cyan);
+}
+
+.mark-cursor {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.mark-accent {
+  fill: var(--crimson);
 }
 
 .brand-mark {
-  border-radius: 10px;
   height: 30px;
   width: 30px;
 }
 
 .hero-mark {
-  border-radius: 24px;
-  box-shadow: 0 0 52px rgba(119, 214, 205, 0.22);
-  font-size: 1.6rem;
   height: 68px;
   margin: 0 auto 22px;
   width: 68px;
@@ -123,7 +151,7 @@ nav {
 
 nav a {
   color: var(--muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-ui);
   font-size: 0.83rem;
   text-decoration: none;
   transition: color 160ms ease;
@@ -155,7 +183,7 @@ main {
 
 .eyebrow {
   color: var(--cyan);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-display);
   font-size: 0.78rem;
   font-weight: 850;
   letter-spacing: 0;
@@ -171,14 +199,18 @@ p {
 }
 
 h1 {
+  font-family: var(--font-display);
   font-size: 6.4rem;
+  font-weight: 850;
   letter-spacing: 0;
   line-height: 0.9;
   margin-bottom: 26px;
 }
 
 h2 {
+  font-family: var(--font-display);
   font-size: 3.25rem;
+  font-weight: 850;
   letter-spacing: 0;
   line-height: 1.02;
   margin-bottom: 18px;
@@ -203,7 +235,7 @@ h3 {
 
 .hero-proof {
   color: var(--soft);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-ui);
   font-size: 0.88rem;
   margin: 22px 0 0;
 }
@@ -241,8 +273,8 @@ h3 {
 }
 
 .button.secondary {
-  background: rgba(233, 130, 150, 0.08);
-  border-color: rgba(233, 130, 150, 0.42);
+  background: rgba(211, 58, 66, 0.08);
+  border-color: rgba(211, 58, 66, 0.42);
   color: #ffd4dc;
 }
 
@@ -318,7 +350,7 @@ h3 {
 
 .terminal-lines p,
 .mini-terminal p {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-ui);
   margin: 0;
   overflow-wrap: anywhere;
 }
@@ -402,7 +434,7 @@ h3 {
 .clone-card span {
   color: var(--cyan);
   display: block;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-ui);
   font-size: 0.82rem;
   font-weight: 800;
   margin-bottom: 14px;
@@ -424,7 +456,7 @@ h3 {
 }
 
 .mini-dashboard {
-  background: linear-gradient(145deg, rgba(119, 214, 205, 0.14), rgba(233, 130, 150, 0.08));
+  background: linear-gradient(145deg, rgba(119, 214, 205, 0.14), rgba(211, 58, 66, 0.08));
   border: 1px solid var(--line-strong);
   border-radius: 14px;
   display: grid;
@@ -506,7 +538,7 @@ h3 {
 
 .story-card {
   background:
-    linear-gradient(135deg, rgba(119, 214, 205, 0.1), rgba(233, 130, 150, 0.07)),
+    linear-gradient(135deg, rgba(119, 214, 205, 0.1), rgba(211, 58, 66, 0.07)),
     var(--panel);
   padding: 36px;
 }

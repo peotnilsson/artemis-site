@@ -1,6 +1,6 @@
 # Artemis Website Scaffold
 
-This folder contains the inert static website scaffold for Sprint 19A, Sprint 19B, Sprint 19C, and Sprint 19D.
+This folder contains the inert static website scaffold for Sprint 19A, Sprint 19B, Sprint 19C, Sprint 19D, and Sprint 22B.
 
 Boundaries:
 
@@ -41,28 +41,34 @@ Sprint 19D redesigns the page as a dark premium landing page while keeping it st
 
 Odysseus is treated as high-level inspiration for polish and structure only. Do not copy its code, text, assets, branding, exact layout, or product identity.
 
-## GitHub Pages Deployment
+## Sprint 22B Brand Mark Consistency
+
+Sprint 22B brings the app-shell Artemis mark direction into the static website source. The header and hero use an inline SVG/CSS mark: dark rounded field, muted cyan crescent moon, simple terminal cursor, and one tiny dampened crimson safety node. The nav wordmark uses `ARTEMIS` with the local Space Mono / JetBrains Mono fallback stack.
+
+This is still static website source only. It adds no logo files, raster files, external images, remote assets, external fonts, scripts, analytics, tracking, build tooling, backend behavior, and no copied competitor branding.
+
+## Public Site Deployment
 
 Expected public URL:
 
-`https://peotnilsson.github.io/artemis/`
+`https://peotnilsson.github.io/artemis-site/`
 
 Deployment path:
 
+- Source repo: private `peotnilsson/artemis`
 - Source folder: `website/`
-- Workflow: `.github/workflows/pages.yml`
-- Artifact path: `website`
+- Public deployment repo: `peotnilsson/artemis-site`
+- Public Pages source: the static copy in `artemis-site`
 - Build step: none
 - Runtime/server step: none
 - Secrets: none
+- Private repo Pages workflow: none required
 
-The workflow checks out the repository, configures GitHub Pages, uploads `website/` as the static Pages artifact, and deploys that artifact. It does not run npm, install dependencies, build assets, start a server, call a backend, or use secrets.
-
-GitHub repository settings still need to enable Pages with GitHub Actions as the source before the public URL will serve the site.
+The private Artemis repo remains the source of truth for website files, docs, and tests. The public-facing site is deployed from the separate public `peotnilsson/artemis-site` repo after manually copying the static files listed below. Do not make the private Artemis repo public just for Pages. Do not re-add a private repo `.github/workflows/pages.yml` workflow unless the deployment strategy changes.
 
 ## Updating The Site
 
-Edit the static files in `website/`, then push to `dev` or `main`. The workflow only runs when `website/**` or `.github/workflows/pages.yml` changes, or when manually started from GitHub Actions.
+Edit the static files in `website/`, validate them in the private Artemis repo, then manually copy the approved files to the public `peotnilsson/artemis-site` repo.
 
 Keep updates within the same safety boundary: no scripts, no analytics, no tracking pixels, no remote assets, no external fonts, no package manager, no build system, and no app/action controls.
 
@@ -79,4 +85,4 @@ The public site repo is the public-facing website surface. The Artemis core repo
 
 ## Disabling Deployment
 
-To disable deployment, turn off GitHub Pages in the repository settings or disable the `Deploy static website to GitHub Pages` workflow in GitHub Actions. Removing or renaming `.github/workflows/pages.yml` also stops future workflow deployments.
+To disable deployment, turn off GitHub Pages or pause publishing in the public `peotnilsson/artemis-site` repo. The private Artemis repo has no Pages workflow to disable.
