@@ -19,6 +19,7 @@
         <circle class="mark-accent" cx="50" cy="47" r="2.8"></circle>
       </symbol>
     </svg>
+
     <header class="site-header">
       <a class="brand" href="#hero" aria-label="Artemis home">
         <svg class="brand-mark artemis-logo-svg" data-artemis-logo="inline-svg" role="img" aria-label="Artemis crescent terminal mark">
@@ -28,207 +29,258 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#features">Features</a>
-        <a href="#demo-preview">Preview</a>
-        <a href="#field-notes">Field notes</a>
-        <a href="#story">Story</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#get-started">Get started</a>
-        <a href="https://github.com/peotnilsson/artemis">GitHub</a>
+        <a href="#story">About</a>
+        <a href="#demo-preview">How it works</a>
+        <a href="#docs">Docs</a>
+        <a class="nav-pill" href="https://github.com/peotnilsson/artemis">GitHub</a>
       </nav>
     </header>
 
     <main>
       <section id="hero" class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
+        <div class="hero-inner">
           <svg class="hero-mark artemis-logo-svg" data-artemis-logo="inline-svg" aria-hidden="true">
             <use href="#artemis-logo-mark"></use>
           </svg>
           <p class="eyebrow">Local-first AI command center</p>
-          <h1 id="hero-title">Your <span class="accent-word">local</span> AI command center.</h1>
-          <p class="hero-line">
-            Artemis is a private assistant for voice, terminal, dashboard, memory,
-            project continuity, and safe computer control - running locally, owned by you.
+          <h1 id="hero-title">Your local AI command center.</h1>
+          <p class="hero-tagline">Your AI assistant. <span>Local, private, and powerful.</span></p>
+          <p class="hero-copy">
+            Artemis is a private assistant that runs on your machine, keeps your data yours,
+            and helps you get things done across voice, terminal, dashboard, memory, and the app shell.
           </p>
-          <div class="hero-actions" aria-label="Page sections">
-            <a class="button primary" href="https://github.com/peotnilsson/artemis">View on GitHub</a>
-            <a class="button secondary" href="#get-started">Get started</a>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#get-started">Get started</a>
+            <a class="button secondary" href="https://github.com/peotnilsson/artemis">View on GitHub</a>
           </div>
-          <p class="hero-proof">No scripts. No tracking. No remote assets. No paid API required for the local path.</p>
+          <p class="hero-proof">No scripts. No tracking. No remote assets. No paid API required.</p>
+          <a class="scroll-indicator" href="#features" aria-label="Skip to features">
+            <span></span>
+          </a>
         </div>
 
-        <aside class="hero-console" aria-label="Static Artemis terminal status preview">
-          <div class="console-frame">
-            <div class="console-top">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="terminal-lines" aria-label="Terminal UI snapshot placeholder">
-              <p><span>$</span> artemis status</p>
-              <p><span>mode</span> local</p>
-              <p><span>voice</span> ready</p>
-              <p><span>dashboard</span> online</p>
-              <p><span>memory</span> guarded</p>
-              <p><span>actions</span> approval-gated</p>
-            </div>
+        <aside class="hero-terminal" aria-label="Static Artemis terminal status preview">
+          <div class="terminal-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>artemis status</strong>
           </div>
-          <div class="orbit-card">
-            <strong>Private desktop companion</strong>
-            <p>Voice-first desktop companion with terminal and dashboard control surfaces.</p>
-          </div>
+          <dl class="terminal-lines">
+            <div><dt>mode</dt><dd>local</dd></div>
+            <div><dt>voice</dt><dd>ready</dd></div>
+            <div><dt>dashboard</dt><dd>online</dd></div>
+            <div><dt>memory</dt><dd>guarded</dd></div>
+            <div><dt>actions</dt><dd>approval-gated</dd></div>
+          </dl>
         </aside>
-      </section>
-
-      <section id="identity" class="section identity-strip" aria-labelledby="identity-title">
-        <p class="eyebrow">What Artemis is</p>
-        <div class="two-column">
-          <h2 id="identity-title">A command center, not just a chat box.</h2>
-          <p>
-            Artemis is being built upward from voice, local models, terminal status, dashboard
-            snapshots, memory boundaries, project continuity, and an app shell roadmap. It is a
-            personal AI layer for your desktop, with safe approval-gated computer actions later.
-          </p>
-        </div>
       </section>
 
       <section id="features" class="section" aria-labelledby="features-title">
         <div class="section-heading">
-          <p class="eyebrow">Control surfaces</p>
-          <h2 id="features-title">One local assistant, multiple ways to steer.</h2>
+          <p class="eyebrow">Local command center</p>
+          <h2 id="features-title">One app, multiple ways to steer.</h2>
+          <p>
+            Artemis is designed as a desktop assistant first: type now, voice/listening later,
+            and future computer control only after explicit approval gates.
+          </p>
         </div>
+
         <div class="feature-grid">
-          <article>
-            <span class="feature-kicker">Voice assistant</span>
-            <h3>Talk to your desktop</h3>
-            <p>Voice-first desktop companion energy for when typing breaks the flow.</p>
+          <article class="feature-card">
+            <span class="feature-icon icon-chat" aria-hidden="true"></span>
+            <h3>Chat</h3>
+            <p>Ask from the app shell without activating voice or starting a background runtime.</p>
+            <small>&amp; app</small>
           </article>
-          <article>
-            <span class="feature-kicker">Terminal UI</span>
-            <h3>Precise local status</h3>
-            <p>Fast read-only commands for project state, routes, dashboard previews, and JSON snapshots.</p>
+          <article class="feature-card">
+            <span class="feature-icon icon-memory" aria-hidden="true"></span>
+            <h3>Memory</h3>
+            <p>Project continuity and private/no-memory modes stay visible and bounded.</p>
+            <small>&amp; context</small>
           </article>
-          <article>
-            <span class="feature-kicker">Dashboard snapshot</span>
-            <h3>Scan the system</h3>
-            <p>Compact status cards for health, phase, memory mode, blockers, and next steps.</p>
+          <article class="feature-card">
+            <span class="feature-icon icon-voice" aria-hidden="true"></span>
+            <h3>Voice</h3>
+            <p>Voice-first desktop companion direction, with listening kept explicit and future.</p>
+            <small>&amp; speech</small>
           </article>
-          <article>
-            <span class="feature-kicker">App shell preview</span>
-            <h3>Desktop shell direction</h3>
-            <p>The app-shell roadmap starts read-only and earns controls only after safety review.</p>
+          <article class="feature-card">
+            <span class="feature-icon icon-models" aria-hidden="true"></span>
+            <h3>Models</h3>
+            <p>Local model routing roadmap for fast, balanced, coding, reasoning, and vision work.</p>
+            <small>&amp; local</small>
           </article>
-          <article>
-            <span class="feature-kicker">Project continuity</span>
-            <h3>Keep the thread alive</h3>
-            <p>Local memory and project continuity help Artemis remember where the work actually stands.</p>
+          <article class="feature-card">
+            <span class="feature-icon icon-files" aria-hidden="true"></span>
+            <h3>Files</h3>
+            <p>Future file and project surfaces must respect local boundaries and permissions.</p>
+            <small>&amp; projects</small>
           </article>
-          <article>
-            <span class="feature-kicker">Safe action system</span>
-            <h3>Actions later. Approvals first.</h3>
-            <p>The safe action roadmap keeps computer control behind explicit approvals, permissions, traces, and audits.</p>
-          </article>
-          <article>
-            <span class="feature-kicker">Local model routing</span>
-            <h3>Use the right local brain</h3>
-            <p>Route fast, balanced, reasoning, coding, and vision work without defaulting to paid APIs.</p>
-          </article>
-          <article>
-            <span class="feature-kicker">Privacy modes</span>
-            <h3>Boundaries that mean something</h3>
-            <p>Private and no-memory modes are product behavior, not a decorative toggle.</p>
+          <article class="feature-card">
+            <span class="feature-icon icon-settings" aria-hidden="true"></span>
+            <h3>Settings</h3>
+            <p>Settings writes are not connected yet; preview controls remain inert by design.</p>
+            <small>&amp; safety</small>
           </article>
         </div>
       </section>
 
-      <section id="demo-preview" class="section" aria-labelledby="demo-preview-title">
+      <section id="demo-preview" class="section" aria-labelledby="demo-title">
         <div class="section-heading">
-          <p class="eyebrow">Static previews</p>
-          <h2 id="demo-preview-title">See the command center take shape.</h2>
+          <p class="eyebrow">Static interface map</p>
+          <h2 id="demo-title">Hover or tap is optional. The preview stays static.</h2>
           <p>
-            These are HTML/CSS preview cards only: no images, no scripts, no remote media, and no
-            private screenshots.
+            These HTML/CSS panels describe the shape of Artemis without screenshots, scripts,
+            copied assets, remote media, or runtime behavior.
           </p>
         </div>
+
+        <div class="panel-grid" aria-label="Static product panels">
+          <article class="panel-card">
+            <span class="panel-icon icon-chat" aria-hidden="true"></span>
+            <h3>Chat</h3>
+            <p>Typed app shell path</p>
+            <small>text now</small>
+          </article>
+          <article class="panel-card">
+            <span class="panel-icon icon-memory" aria-hidden="true"></span>
+            <h3>Memory</h3>
+            <p>Guarded continuity</p>
+            <small>metadata safe</small>
+          </article>
+          <article class="panel-card">
+            <span class="panel-icon icon-voice" aria-hidden="true"></span>
+            <h3>Voice</h3>
+            <p>Future runtime</p>
+            <small>explicit start</small>
+          </article>
+          <article class="panel-card">
+            <span class="panel-icon icon-models" aria-hidden="true"></span>
+            <h3>Models</h3>
+            <p>Local routing</p>
+            <small>Ollama path</small>
+          </article>
+          <article class="panel-card">
+            <span class="panel-icon icon-screen" aria-hidden="true"></span>
+            <h3>Screen</h3>
+            <p>Permission future</p>
+            <small>no capture now</small>
+          </article>
+          <article class="panel-card">
+            <span class="panel-icon icon-settings" aria-hidden="true"></span>
+            <h3>Settings</h3>
+            <p>Preview only</p>
+            <small>no writes</small>
+          </article>
+        </div>
+
         <div class="preview-grid">
-          <article class="preview-card terminal-preview">
+          <article class="preview-card">
             <div class="preview-label">Terminal status card</div>
-            <div class="mini-terminal">
-              <p>--terminal status</p>
-              <p>voice: ready</p>
-              <p>phase: dark premium redesign</p>
+            <div class="mini-terminal" aria-label="Terminal UI snapshot placeholder">
+              <p>$ python main.py --terminal status</p>
+              <p>terminal ui: ready</p>
+              <p>safe action roadmap: approval-gated computer-action layer</p>
             </div>
           </article>
-          <article class="preview-card dashboard-preview">
+          <article class="preview-card">
             <div class="preview-label">Dashboard card</div>
             <div class="mini-dashboard">
-              <span>Ready</span>
+              <span>dashboard snapshot</span>
               <strong>Local status bridge</strong>
-              <small>route: high | memory: guarded</small>
+              <small>health ready | memory guarded</small>
             </div>
           </article>
-          <article class="preview-card shell-preview">
+          <article class="preview-card">
             <div class="preview-label">App shell card</div>
             <div class="mini-shell">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span>app shell preview</span>
+              <strong>Text ready</strong>
+              <small>voice runtime disabled/future / app-shell roadmap</small>
             </div>
           </article>
-          <article class="preview-card voice-preview">
+          <article class="preview-card">
             <div class="preview-label">Voice flow card</div>
             <div class="voice-flow">
-              <p>User speech</p>
-              <p>Local STT</p>
+              <p>user speech</p>
+              <p>local STT</p>
               <p>Artemis reply</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="field-notes" class="section" aria-labelledby="field-notes-title">
+      <section id="field-notes" class="section" aria-labelledby="notes-title">
         <div class="section-heading">
           <p class="eyebrow">Field notes</p>
-          <h2 id="field-notes-title">A little personality, zero fake enterprise theater.</h2>
+          <h2 id="notes-title">What Artemis stands for.</h2>
+          <p>No fake customer quotes, no launch theater. Just design principles for a local assistant.</p>
         </div>
         <div class="notes-grid">
           <article>
+            <h3>Local-first by default</h3>
             <p>Boots locally. Answers locally. Keeps the keys with you.</p>
           </article>
           <article>
+            <h3>Actions require approval</h3>
+            <p>Actions later. Approvals first. The sharp button can wait.</p>
+          </article>
+          <article>
+            <h3>Text now, voice next</h3>
             <p>Terminal when you want precision. Voice when you want flow.</p>
           </article>
           <article>
-            <p>Actions later. Approvals first. The sharp button can wait.</p>
+            <h3>Private memory modes</h3>
+            <p>Memory must explain its boundaries before it earns trust.</p>
+          </article>
+          <article>
+            <h3>Transparent activity</h3>
+            <p>Safe activity should be legible without exposing hidden raw logs.</p>
           </article>
         </div>
       </section>
 
       <section id="story" class="section story-section" aria-labelledby="story-title">
-        <div class="story-card">
-          <p class="eyebrow">Why Artemis exists</p>
-          <h2 id="story-title">Cloud assistants are useful. Your desktop still deserves its own local command layer.</h2>
+        <div class="story-copy">
+          <p class="eyebrow">How it started</p>
+          <h2 id="story-title">Built for privacy. Made for you.</h2>
           <p>
-            Most AI tools feel disconnected from the real machine where your work happens. Artemis is
-            being built as a local AI command center instead: voice, memory, dashboard, terminal, and
-            app shell first, with a future downloadable desktop assistant as the long-term target.
+            Artemis exists because a useful assistant should understand the machine where the
+            work happens. It should be local-first, app-first, and clear about what it can and
+            cannot do.
           </p>
           <p>
-            The goal is not to make another chat tab. The goal is to make your local computer more
-            legible, continuous, and eventually safer to control.
+            No cloud lock-in. No unnecessary tracking. No decorative privacy language. The goal
+            is a desktop command layer that keeps control with the person at the keyboard.
           </p>
         </div>
+        <aside class="story-terminal" aria-label="Why Artemis terminal note">
+          <div class="terminal-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>user@artemis:~</strong>
+          </div>
+          <div class="terminal-copy">
+            <p>&gt; why artemis?</p>
+            <p>Because privacy should be the ground floor, not a toggle.</p>
+            <p>Because your assistant should work for your machine, not someone else's dashboard.</p>
+          </div>
+        </aside>
       </section>
 
-      <section id="privacy-safety" class="section safety-section" aria-labelledby="privacy-title">
+      <section id="privacy-safety" class="section safety-section" aria-labelledby="safety-title">
         <div class="section-heading">
-          <p class="eyebrow">Privacy and safety</p>
-          <h2 id="privacy-title">Local-first by default, action-safe by design.</h2>
+          <p class="eyebrow">Safety boundary</p>
+          <h2 id="safety-title">Local-first does not mean reckless.</h2>
         </div>
         <div class="safety-grid">
-          <p>Local models and local speech tooling are the default direction.</p>
-          <p>No tracking, analytics, remote scripts, remote images, or external fonts in this scaffold.</p>
-          <p>Private and no-memory modes remain product boundaries, not decorative labels.</p>
-          <p>Future computer control requires explicit approval, permissions, traces, and audits.</p>
+          <p>Type now in the app shell; voice/listening remains an explicit future runtime.</p>
+          <p>No microphone capture, screen capture, model switching, settings writes, or action execution is added by this site.</p>
+          <p>Future computer control stays behind approval gates, permissions, traces, and audits.</p>
+          <p>Safe action system work stays roadmap-only until a later approval-gated sprint.</p>
+          <p>No tracking, analytics, remote scripts, remote images, external fonts, or paid API dependency.</p>
         </div>
       </section>
 
@@ -238,33 +290,59 @@
           <h2 id="roadmap-title">From local assistant to safe desktop command center.</h2>
         </div>
         <ol class="roadmap-list">
-          <li><strong>Now:</strong> local voice/STT/TTS, terminal UI, dashboard/status bridge, website, and app-shell preview.</li>
-          <li><strong>Next:</strong> real app shell scaffold that renders safe local status first.</li>
-          <li><strong>Later:</strong> Tauri desktop app, approval-gated computer-action layer, installer, and updater.</li>
-          <li><strong>Future:</strong> richer UI, safer automation, and optional integrations.</li>
+          <li><strong>Now:</strong> terminal UI, dashboard/status bridge, local voice path, memory/project continuity, and typed app-shell stub.</li>
+          <li><strong>Next:</strong> richer app shell surfaces for chat, safe activity, models, screen state, memory, and settings previews.</li>
+          <li><strong>Later:</strong> voice runtime, explicit permissions, local model routing, and the approval-gated computer-action layer.</li>
+          <li><strong>Future:</strong> installer, updater, downloadable desktop assistant, and safer automation.</li>
         </ol>
       </section>
 
-      <section id="get-started" class="section get-started" aria-labelledby="get-started-title">
-        <div>
-          <p class="eyebrow">Get started</p>
-          <h2 id="get-started-title">Follow the public site while the core grows in private.</h2>
-          <p>
-            Public site: `peotnilsson/artemis-site`. Core repo: private while Artemis is under
-            development. The website files here can be copied to the public site repo after validation.
-          </p>
+      <section id="docs" class="section docs-section" aria-labelledby="docs-title">
+        <div class="section-heading">
+          <p class="eyebrow">Resources</p>
+          <h2 id="docs-title">Everything stays readable.</h2>
+          <p>Documentation lives with the source so the website, app shell, and safety model can move together.</p>
         </div>
-        <div class="clone-card" aria-label="GitHub clone command">
-          <span>Public website repo</span>
-          <code>git clone https://github.com/peotnilsson/artemis-site.git</code>
-          <code>cd artemis-site</code>
-          <a href="https://github.com/peotnilsson/artemis-site">View public site repo</a>
+        <div class="resource-grid">
+          <article>
+            <h3>Website plan</h3>
+            <p>Static source, public copy path, and no-build deployment notes.</p>
+          </article>
+          <article>
+            <h3>App runtime model</h3>
+            <p>Text-ready app behavior, future voice state, and action approval boundaries.</p>
+          </article>
+          <article>
+            <h3>Brain policy</h3>
+            <p>Local-first safety notes for memory, actions, snapshots, and public surfaces.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="get-started" class="section get-started" aria-labelledby="get-started-title">
+        <div class="get-started-panel">
+          <p class="eyebrow">Get started</p>
+          <h2 id="get-started-title">Artemis is yours.</h2>
+          <p>Local-first. Open development. Private by design.</p>
+          <div class="command-box" aria-label="GitHub clone command">
+            <code>$ git clone https://github.com/peotnilsson/artemis.git &amp;&amp; cd artemis</code>
+          </div>
+          <a class="button primary" href="https://github.com/peotnilsson/artemis">View on GitHub</a>
+          <div class="chip-row" aria-label="Project traits">
+            <span>Local-first</span>
+            <span>Private by default</span>
+            <span>App-first</span>
+            <span>No tracking</span>
+            <span>Voice + text roadmap</span>
+          </div>
         </div>
       </section>
     </main>
 
     <footer id="footer" class="site-footer">
-      <p>Artemis | local-first AI command center | No scripts. No tracking. No remote assets.</p>
+      <p>&copy; 2026 Artemis</p>
+      <p>Built for local control.</p>
+      <p>No tracking. No cloud lock-in. Your machine, your assistant.</p>
     </footer>
   </body>
 </html>

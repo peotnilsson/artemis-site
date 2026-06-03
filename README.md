@@ -1,6 +1,6 @@
 # Artemis Website Scaffold
 
-This folder contains the inert static website scaffold for Sprint 19A, Sprint 19B, Sprint 19C, Sprint 19D, and Sprint 22B.
+This folder contains the inert static website scaffold for Sprint 19A, Sprint 19B, Sprint 19C, Sprint 19D, Sprint 22B, and Sprint 25B.
 
 Boundaries:
 
@@ -46,6 +46,14 @@ Odysseus is treated as high-level inspiration for polish and structure only. Do 
 Sprint 22B brings the app-shell Artemis mark direction into the static website source. The header and hero use an inline SVG/CSS mark: dark rounded field, muted cyan crescent moon, simple terminal cursor, and one tiny dampened crimson safety node. The nav wordmark uses `ARTEMIS` with the local Space Mono / JetBrains Mono fallback stack.
 
 This is still static website source only. It adds no logo files, raster files, external images, remote assets, external fonts, scripts, analytics, tracking, build tooling, backend behavior, and no copied competitor branding.
+
+## Sprint 25B Unified Dark Interface Visual System
+
+Sprint 25B redesigns the website around the same interface language as the Tauri app shell: near-black/navy background, CSS-only dotted grid, subtle contour lines, soft purple/cyan glow, dark glass cards, inline Artemis mark, and `ARTEMIS` wordmark. The primary accent is purple, the technical accent is cyan, and the dampened crimson mark remains a tiny safety/action node.
+
+The page structure now focuses on a polished local AI product surface: centered hero, sticky nav with Features/About/How it works/Docs/GitHub, Chat/Memory/Voice/Models/Files/Settings cards, static interface panels, story terminal, field notes/design principles, roadmap, docs/resources, get-started panel, and footer.
+
+This is still HTML/CSS only. Sprint 25B adds no scripts, generated image assets, raster assets, logo files, external images, remote assets, external fonts, dependencies, build tooling, backend behavior, analytics, tracking, app action controls, runtime controls, model calls, microphone/screen behavior, settings writes, installer, updater, or copied competitor branding.
 
 ## Public Site Deployment
 
